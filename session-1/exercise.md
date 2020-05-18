@@ -20,6 +20,7 @@ It should contain following information:
 - name
 - role
 - intro
+- image *(loaded from the WWW)*
 - link to details *(not linked so far…)*
 
 ---
