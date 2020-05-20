@@ -1,3 +1,21 @@
+# CTA Button Exercise
+
+(CSS Modules + Props)
+
+- Apply one general styling to the Button using css modules
+- Use the props ‘type’ to apply correct stylings, when button type is
+  - 'confirm', the button should have a green background color
+  - 'cancel', the background color should be orange
+  - 'abort', the background color should be red
+- use property ‘type’ to pass the type to the `<Button>` component
+- pass also the ‘title’ within props to `<Button>`
+- make sure disabled buttons are recognizable by users
+
+
+![cta buttons](cta-buttons.png)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
