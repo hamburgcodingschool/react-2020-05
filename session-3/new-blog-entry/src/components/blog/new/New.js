@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './New.module.css'
 
 const New = () => {
+  const [text, setText] = useState('')
+  const changeText = (event) => {
+    const value = event.currentTarget.value
+    setText(value)
+  }
+
   return (
     <form className={style.new}>
       <h3 className={style.headline}>Create New Entry</h3>
@@ -19,14 +25,17 @@ const New = () => {
         type="text"
         name="title"
         id="title"
+        placeholder="Your Blog Title"
+        value={text}
+        onChange={changeText}
         className={style.input}
       />
 
-      <label htmlFor="auhtor" className={style.label}>Author</label>
+      <label htmlFor="author" className={style.label}>Author</label>
       <input
         type="text"
-        name="auhtor"
-        id="auhtor"
+        name="author"
+        id="author"
         className={style.input}
       />
 
