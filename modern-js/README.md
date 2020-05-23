@@ -1,9 +1,49 @@
 # Train Modern JS
 
 Below you will find some exercises to train modern JS.
-Keep in mind to use all modern JS approaches and also the Array functions, like Array.prototype.map or Array.prototype.reduce.
+Keep in mind to use all modern JS approaches and also the Array functions, like `Array.prototype.map` or `Array.prototype.reduce`.
 
 ---
+
+## Be polite
+
+Given a list of person's:
+
+```const people = [{name:'Johannes', age: 60}, {name:'Maya', age: 45}, {name:'Suzi', age: 66}]
+
+const bePolite = (people) => {
+  // code the solution
+}
+
+console.log(bePolite(people))
+
+```
+
+Please finish the bePolite function. It should return a cleaned array containing the names only.
+
+Use `Array.prototype.map()`: https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+---
+
+## Swap Numbers
+
+Given is an array containing only two number items.
+The numbers need to be swapped, so that the number on index 0 moves to index 1 and the number at index 1 moves to index 0.
+
+Example:
+Two numbers with a=10, b=12 turns to a=12, b=10]
+
+Use only an array and destructuring to swap the two numbers.
+Hint: Put the two numbers into an array: [a,b] and when use destructuring for the swap.
+
+```
+let a = 5
+let b = 8
+
+// code the solution
+
+console.log(a, b) // 8,5
+```
 
 ## Sort Santa's Reindeer
 
@@ -41,8 +81,6 @@ More about:
 https://www.codewars.com/kata/52a6b34e43c2484ac10000cd/train/javascript
 
 Use  `Array.prototype.filter()` and `Array.prototype.map()`to solve this task.
-
-`Array.prototype.map()`: https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 ---
 
