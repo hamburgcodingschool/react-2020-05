@@ -9,7 +9,8 @@ Keep in mind to use all modern JS approaches and also the Array functions, like 
 
 Given a list of person's:
 
-```const people = [{name:'Johannes', age: 60}, {name:'Maya', age: 45}, {name:'Suzi', age: 66}]
+```
+const people = [{name:'Johannes', age: 60}, {name:'Maya', age: 45}, {name:'Suzi', age: 66}]
 
 const bePolite = (people) => {
   // code the solution
