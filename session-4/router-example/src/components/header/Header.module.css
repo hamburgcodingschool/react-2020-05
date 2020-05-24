@@ -1,0 +1,19 @@
+
+.header {
+  padding: 2em;
+}
+
+.navigationList {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigationListItem {
+  margin: 1em;
+}
+
+.navigationListItem:first-child {
+  margin-left: 0;
+}
