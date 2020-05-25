@@ -1,4 +1,4 @@
-# Todo's
+# Todo's (Exercise)
 
 Given is an incomplete Todo's App.
 Your task is to finish it.
