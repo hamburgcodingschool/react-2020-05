@@ -3,9 +3,30 @@ import style from './New.module.css'
 
 const New = () => {
   const [text, setText] = useState('')
+  const [publish, setPublish] = useState(false)
+  const [author, setAuthor] = useState('')
+  const [copy, setCopy] = useState('')
+  const [image, setImage] = useState('')
+
   const changeText = (event) => {
     const value = event.currentTarget.value
     setText(value)
+  }
+  const changePublish = (event) => {
+    const value = event.currentTarget.checked
+    setPublish(value)
+  }
+  const changeAuthor = (event) => {
+    const value = event.currentTarget.value
+    setAuthor(value)
+  }
+  const changeCopy = (event) => {
+    const value = event.currentTarget.value
+    setCopy(value)
+  }
+  const changeImage = (event) => {
+    const value = event.currentTarget.value
+    setImage(value)
   }
 
   return (
@@ -16,6 +37,8 @@ const New = () => {
         type="checkbox"
         name="publish"
         id="publish"
+        checked={publish}
+        onChange={changePublish}
         className={style.checkbox}
       />
       <label htmlFor="publish" className={style.labelInline}>publish</label>
@@ -36,6 +59,8 @@ const New = () => {
         type="text"
         name="author"
         id="author"
+        value={author}
+        onChange={changeAuthor}
         className={style.input}
       />
 
@@ -43,6 +68,8 @@ const New = () => {
       <textarea
         className={style.textarea}
         name="copy"
+        onChange={changeCopy}
+        value={copy}
         id="copy"
       />
 
@@ -51,11 +78,13 @@ const New = () => {
         type="text"
         name="image"
         id="image"
+        value={image}
+        onChange={changeImage}
         className={style.input}
       />
 
       <button type="submit" className={style.button}>
-        create only
+        {publish ? 'publish' : 'create only'}
       </button>
     </form>
   )
