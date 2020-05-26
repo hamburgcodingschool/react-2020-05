@@ -14,7 +14,14 @@ Following holds some steps, which might be helpful to start:
 Remember, that you can also pass functions to child components as property. So you can pass function `addTodo()` from the App component to the AddTodo component.
 1. Write the TodoList component, which takes the list of todo's as property.
 1. The Todo listed in the TodoList, should have a checkbox. It marks if a todo is completed or still open. The checkbox can be clicked to mark the todo as completed (and vice versa).
-1. The two buttons on the top handle the filtering of the todo's gets rendered to the view. While the first filters by the open todo's, the second button set's it back to all.
+1. The two buttons on the top define the filtering options. Here it is possible to ste the state, if all todos should be displayed or just the open ones.
+    When clicking on the buttons the corresponding functions should be called:
+
+    - For the button 'Set only open' the function `setOpenFilter` should be called when clicked. It sets a state, if filtering is active or not.
+    - For the button 'Show All' the function `resetFilter` resets the filtering state.
+
+    Keep in mind to use a state variable initialized with `useSate()`here, too
+1. The filtering should be done before passing the todos to the TodoList component
 
     Here you can use the `filter` function from `Array`.
     e.g.
@@ -25,10 +32,6 @@ Remember, that you can also pass functions to child components as property. So y
     })
     ```
 
-    When clicking on the buttons the corresponding functions should be called:
-
-    - For the button 'Show only open' the function `showOpenFilter` should be called when clicked.
-    - For the button 'Show All' the function `resetFilter` should be called called when clicked.
 
 ---
 

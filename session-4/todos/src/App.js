@@ -17,14 +17,14 @@ export default function App() {
     // add the code here
   }
 
-  const showOpenFilter = () => {
-    // showOpen filters the list by only open todo's
+  const setOpenFilter = () => {
+    // sets as showOpen filter
     // add the code here
   }
 
   const resetFilter = () => {
-      // showOpen filters the list by only open todo's
-      // add the code here
+    // resets the filter
+    // add the code here
   }
 
 
