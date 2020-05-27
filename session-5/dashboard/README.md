@@ -1,3 +1,18 @@
+# Dashboard
+
+Given is the “Dashboard” project.
+It is in the very beginning and needs some rough structuring of the page layout.
+At the left sidebar a Menu has to be placed.
+The sidebar can be exchanged with other content, depending on the URL path.
+
+On the right the Main takes place. Also up to the path it should change its content:
+
+Path: “/” → Component: Hello,
+Path: “/bye” → Component: Bye
+
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
