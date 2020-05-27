@@ -1,43 +1,53 @@
 import React, { useState } from 'react'
 import style from './New.module.css'
 
-const New = () => {
-  const [text, setText] = useState('')
-  const [publish, setPublish] = useState(false)
-  const [author, setAuthor] = useState('')
-  const [copy, setCopy] = useState('')
-  const [image, setImage] = useState('')
+const New = ({addBlogEntry}) => {
+  const initialState = {
+    title: '',
+    copy: '',
+    author: '',
+    publish: false,
+    image: ''
+  }
+  const [newBlogEntry, setNewBlogEntry] = useState(initialState)
 
-  const changeText = (event) => {
-    const value = event.currentTarget.value
-    setText(value)
+  const changeTitle = (event) => {
+    const {value:title} = event.currentTarget
+    setNewBlogEntry({...newBlogEntry, title})
   }
   const changePublish = (event) => {
-    const value = event.currentTarget.checked
-    setPublish(value)
+    const {checked: publish} = event.currentTarget
+    setNewBlogEntry({...newBlogEntry, publish})
   }
   const changeAuthor = (event) => {
     const value = event.currentTarget.value
-    setAuthor(value)
+    setNewBlogEntry({...newBlogEntry, author: value})
   }
   const changeCopy = (event) => {
     const value = event.currentTarget.value
-    setCopy(value)
+    setNewBlogEntry({...newBlogEntry, copy: value})
   }
   const changeImage = (event) => {
     const value = event.currentTarget.value
-    setImage(value)
+    setNewBlogEntry({...newBlogEntry, image: value})
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log('submit the form')
+    addBlogEntry({...newBlogEntry, created: Date.now()})
+    setNewBlogEntry(initialState)
   }
 
   return (
-    <form className={style.new}>
+    <form className={style.new} onSubmit={handleSubmit}>
       <h3 className={style.headline}>Create New Entry</h3>
 
       <input
         type="checkbox"
         name="publish"
         id="publish"
-        checked={publish}
+        checked={newBlogEntry.publish}
         onChange={changePublish}
         className={style.checkbox}
       />
@@ -49,8 +59,8 @@ const New = () => {
         name="title"
         id="title"
         placeholder="Your Blog Title"
-        value={text}
-        onChange={changeText}
+        value={newBlogEntry.title}
+        onChange={changeTitle}
         className={style.input}
       />
 
@@ -59,7 +69,7 @@ const New = () => {
         type="text"
         name="author"
         id="author"
-        value={author}
+        value={newBlogEntry.author}
         onChange={changeAuthor}
         className={style.input}
       />
@@ -69,7 +79,7 @@ const New = () => {
         className={style.textarea}
         name="copy"
         onChange={changeCopy}
-        value={copy}
+        value={newBlogEntry.copy}
         id="copy"
       />
 
@@ -78,13 +88,13 @@ const New = () => {
         type="text"
         name="image"
         id="image"
-        value={image}
+        value={newBlogEntry.image}
         onChange={changeImage}
         className={style.input}
       />
 
       <button type="submit" className={style.button}>
-        {publish ? 'publish' : 'create only'}
+        {newBlogEntry.publish ? 'publish' : 'create only'}
       </button>
     </form>
   )
