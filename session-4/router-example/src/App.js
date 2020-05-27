@@ -9,16 +9,15 @@ import Contact from './components/contact/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Header />
         <Route path="/" exact><Home /></Route>
         <Route path="/about" component={About} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/contact/:userName" component={Contact} />
-      </Router>
-
-    </div>
+      </div>
+    </Router>
   );
 }
 
