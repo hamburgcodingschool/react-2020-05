@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  margin: 2em;
+}
+
+.sidebar {
+  flex: 0 0 30%;
+  width: 30%;
+  border: 1px solid;
+  margin: 2em;
+}
+
+.main {
+  flex: 0 0 70%;
+  width: 70%;
+}
+
+
+
