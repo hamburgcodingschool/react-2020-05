@@ -6,7 +6,7 @@
 1. Store the data to local storage and read it from local storage to initialize the `pokemons` state (if available).
 If no data is stored in the local storage, initialize it with an empty array.
 
-// --- Advanced, if you like ---
+*--- Advanced, if you like ---*
 1. Add Routing for `<Details />`. As Router param the pokemon `name` is passed.
 1. Link all Pokemons in the `<List />`, to show more details `<Link to="/details/[name-of-the-pokemon]">...`
 1. Use the Router Param 'name' passed to the <Details>, to read the stored data of the Pokemon out of the Pokemons Array in local storage.
