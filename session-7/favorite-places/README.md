@@ -1,20 +1,20 @@
 # Favorite places
 
-Please add a Map which shows one favorite place:
+Please add a map which shows one favorite place:
 - London
   - Latitude: 51.505797
   - Longitude: -0.075195
 
 - Use the google-map-react library therefore. It needs to be installed.
-- Remember that you need an element with given height, which wraps the Map.
-- Add an event listener which shows there user has clicked on the map, and log the coordinates to console.
+- Remember that you need an element with given height, which wraps the map.
+- Add an event listener which logs the coordinates to console, when a user clicks on the map.
 
 ## Optional:
 
-**Show all your favorite places:***
+**Show all your favorite places:**
 
 It is possible to add more `<Marker />` than only one within the `<GoogleMapReact />`
-So, please create an array with at least five of your favorite places. And Mark all of those in the Map. You can use also here Array.prototype.map to map over all places.
+So, please create an array with at least five of your favorite places. And Mark all of those in the map. You can use also here Array.prototype.map to map over all places.
 
 Example:
 
