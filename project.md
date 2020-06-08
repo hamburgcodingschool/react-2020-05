@@ -155,7 +155,7 @@ A blog post should contain:
     There is a way to use keys in the React project without the risk to push those to a repository accidentally:
       - Add a file `.env` into your project root folder. It is ignored by git.
       - In this file you can define custom environment variables like that: `REACT_APP_MY_API_KEY=MyKey-12345`
-      - Within your component you can use it with `{process.env.REACT_APP_MY_API_KEY}
+      - Within your component you can use it with `{process.env.REACT_APP_MY_API_KEY}`
       - After every change in this files you have to restart your project.
 
       For more information check out: https://create-react-app.dev/docs/adding-custom-environment-variables/.
