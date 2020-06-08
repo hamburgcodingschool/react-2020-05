@@ -14,7 +14,7 @@ function App() {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1000")
       .then(response => response.json())
       .then(data => {
-        localStorage.setItem("Pokemons", JSON.stringify(data.results));
+        localStorage.setItem("pokes", JSON.stringify(data.results));
         setPokemons(data.results);
         setLoading(false);
       }).catch(reason => {
