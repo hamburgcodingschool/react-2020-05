@@ -31,7 +31,7 @@ It links to '/new', where logged in users can add new blog posts.
 
 ### World Map with Google Maps API
 
-- Use the Use the [google-map-react](https://github.com/google-map-react/google-map-react) library to display a world map.
+- Use the [google-map-react](https://github.com/google-map-react/google-map-react) library to display a world map.
 - For each blog post, put a marker on the map at the location of the post.
 - Initially the map gets centered by the newest blog post entry.
 
