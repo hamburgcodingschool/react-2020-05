@@ -1,20 +1,24 @@
 
-## Project: Travel Blog in React
+# Project: Travel Blog in React
 
 This project is part of the curriculum of the Full-Stack Web Development program at [Hamburg Coding School](https://hamburgcodingschool.com/).
 
-### Goal
+## Goal
 
 Goal is to transfer the main idea from your last [project "The Travel Blog"](https://github.com/hamburgcodingschool/javascript-for-web-2020-03/blob/master/PROJECT.md),
 made with pure Javascript, HTML and CSS into a **React App**.
 
 While working on the project remind yourself of *"thinking in components"*, – one of the many great parts of React.
 
-### Features
+## Features
 
-#### Dashboard (Main Page)
+### Dashboard (Main Page)
 
-The dashboard shows an overview of the all blog posts and a contains a map aside, there all blog posts location are marked.
+The dashboard shows an overview of the all blog posts and a Google Map.
+- Left: Blog Post preview cards
+- Right: Google Map with markers at the positions of the blog posts
+
+
 
 ### Menu Bar
 - Add a menu which contains the logo and the "Blog Post" Headline on the left side.
