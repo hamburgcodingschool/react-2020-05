@@ -31,7 +31,7 @@ It links to '/new', where logged in users can add new blog posts.
 
 ### World Map with Google Maps API
 
-- Use the Google Maps JavaScript API to display a world map.
+- Use the Use the [google-map-react](https://github.com/google-map-react/google-map-react) library to display a world map.
 - For each blog post, put a marker on the map at the location of the post.
 - Initially the map gets centered by the newest blog post entry.
 
@@ -42,7 +42,9 @@ It contains:
   - title
   - visiting date
   - authors name
-  - A magnitude is placed at right and links to the detail page '/details:id'
+  - Place a link, which links to the detail page '/details:id'
+  - The "InfoWindow" can be closed by clicking on the "x" (which is placed at right-top in the "InfoWindow" 
+
 
 #### Get Blog Posts from Firestore
 
@@ -62,7 +64,7 @@ It contains:
   - visiting date
   - authors name
   - image
-  - A magnitude is placed at right/top and links to the detail page '/details:id'
+  - When user clicks on one of the listed blog post than she gets linked to the detail page '/details:id'
 
 **In Detail**
 - On clicking at the title or the magnitude of the blog post preview, the blog post is opened at the detail page '/post/:id'.
@@ -75,7 +77,6 @@ A blog post should contain:
   - title
   - visiting date
   - authors name
-  - creation date
   - image
   - text
   - location with city and country
@@ -84,7 +85,31 @@ A blog post should contain:
 
 - With the path '/new' a blog post form is shown, where new blog posts can be added.
 - On submit, a new blog post is sent and stored to Firestore.
-- The form is cleared after adding a new blog post and ready to another one.
+- The form is cleared after adding a new blog post and the user gets directed to the Dashboard, again.
+  You can use the history hook provided by the React Router: `useHistory()`.
+
+  ```
+  import { useHistory } from "react-router-dom";
+
+  function HomeButton() {
+    let history = useHistory();
+
+    function handleClick() {
+      history.push("/home");
+    }
+
+    return (
+      <button type="button" onClick={handleClick}>
+        Go home
+      </button>
+    );
+  }
+  ```
+  You can read more about, how changing a route programmatically, here:
+  
+  - https://reacttraining.com/react-router/web/api/Hooks/usehistory
+  - https://reacttraining.com/react-router/web/api/history
+
 - For the images: Save the image in your project manually in the public folder and use it with relative path as string.
   For instance: The image `barcelona.jpg` saved under `public/images` can be linked in the templates with `"/images/barcelona.jpg"`.
 - Only signed in user can add new blog posts.
@@ -160,12 +185,12 @@ A blog post should contain:
 
       For more information check out: https://create-react-app.dev/docs/adding-custom-environment-variables/.
 
-
-
   - If you worked in a team, link the GitHub accounts of both of you in the README.md.
 
 2. Send us an email with the following information:
   - A link to your GitHub repository
+  - Your firebase configuration and
+  - Please add us (Teresa and Mary) as guest user in firebase or add a guest user, which we can use.
   - If you worked in a team, both your names
   - If you did any bonus tasks, list them
   - Send it to Mary (mary@hamburgcodingschool.com) and Teresa (teresa@hamburgcodingschool.com)
