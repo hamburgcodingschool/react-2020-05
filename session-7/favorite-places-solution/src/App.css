@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.mapWrapper {
+  height: 100vh;
+}
+
+.marker {
+  position: absolute;
+  left: -32px;
+  top: -64px;
+}
