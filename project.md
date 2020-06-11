@@ -27,6 +27,8 @@ The dashboard shows an overview of the all blog posts and a Google Map.
 
 > **Icon Resources:** We recommend you use [FontAwesome](https://fontawesome.com/) for your icons.
 
+![Menu Bar](/img/menu-bar.jpg)
+
 ### 3. Authentication / Login
 - Use Firebase Auth (login with email and password) for authentication.
 - If the login button is clicked, a login form is shown right below the login button under the menu bar.
@@ -150,6 +152,8 @@ You can choose any of these optional bonus tasks, in any order.
 
 - On the Blog Post Detail page, place a the map on the right side next to the blog post.
 - The map shows centered the location of the blog post.
+
+![Map on Blog Post Detail](/img/bonus-map.jpg)
 
 ### Bonus 2: Firebase Storage for images
 
