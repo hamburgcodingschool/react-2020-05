@@ -29,15 +29,6 @@ The dashboard shows an overview of the all blog posts and a Google Map.
 
 ![Menu Bar](/img/menu-bar.jpg)
 
-### 3. Authentication / Login
-- Use Firebase Auth (login with email and password) for authentication.
-- If the login button is clicked, a login form is shown right below the login button under the menu bar.
-- The User can login with her email and password.
-- If successfully logged in, the login form disappears and instead of the login button a logout button is shown.
-- If logged in, there should be another button for adding a new blog post (icon + text: "New blog post") on the left of the logout button. It links to `/new`, where the logged-in user can add a new blog post.
-
-![Menu Bar](/img/login-logout.jpg)
-
 ### 4. World Map with Google Maps API
 
 - Use the [google-map-react](https://github.com/google-map-react/google-map-react) library to display a world map.
@@ -58,13 +49,6 @@ The dashboard shows an overview of the all blog posts and a Google Map.
 
 
 ### 5. Blog Posts
-
-#### Get Blog Posts from Firestore
-
-- Store the blog posts on Firebase Firestore and load them with the Firebase API.
-- Also save the coordinates of a location with latitude and longitude.
-- Load all blog posts on the dashboard (main) page.
-- The blog post previews should be visible on the left, right beside the map.
 
 #### Blog Post Previews
 
@@ -95,7 +79,24 @@ A blog post should contain:
 
 ![Blog Post Detail](/img/blog-post.jpg)
 
-### 6. New Blog Post
+### 7. Imprint / Contact
+
+- Create a link `/contact` in the menu bar named "Contact".
+- On the contact page place your (and your team mate's) name.
+- Write two sentences about your project.
+- Put your (or if you prefer [Hamburg Coding School's](https://hamburgcodingschool.com/contact/)) contact details:
+  - name
+  - address
+  - email
+  - phone number
+- Write a note that this was a project from a course at Hamburg Coding School.
+
+
+## Optional Bonus Tasks
+
+You can choose any of these optional bonus tasks, in any order.
+
+### Bonus 6: New Blog Post
 
 - With the path `/new` a blog post form is shown, where a new blog post can be added.
 - On submit, the new blog post is sent and stored to Firestore.
@@ -131,22 +132,21 @@ A blog post should contain:
 
 ![New Blog Post](/img/new-blog-post.jpg)
 
-### 7. Imprint / Contact
+### Bonus 7: Get Blog Posts from Firestore
 
-- Create a link `/contact` in the menu bar named "Contact".
-- On the contact page place your (and your team mate's) name.
-- Write two sentences about your project.
-- Put your (or if you prefer [Hamburg Coding School's](https://hamburgcodingschool.com/contact/)) contact details:
-  - name
-  - address
-  - email
-  - phone number
-- Write a note that this was a project from a course at Hamburg Coding School.
+- Store the blog posts on Firebase Firestore and load them with the Firebase API.
+- Also save the coordinates of a location with latitude and longitude.
+- Load all blog posts on the dashboard (main) page.
+- The blog post previews should be visible on the left, right beside the map.
 
+### Bonus 8. Authentication / Login
+- Use Firebase Auth (login with email and password) for authentication.
+- If the login button is clicked, a login form is shown right below the login button under the menu bar.
+- The User can login with her email and password.
+- If successfully logged in, the login form disappears and instead of the login button a logout button is shown.
+- If logged in, there should be another button for adding a new blog post (icon + text: "New blog post") on the left of the logout button. It links to `/new`, where the logged-in user can add a new blog post.
 
-## Optional Bonus Tasks
-
-You can choose any of these optional bonus tasks, in any order.
+![Menu Bar](/img/login-logout.jpg)
 
 ### Bonus 1: Map for Blog Post Detail Page
 
